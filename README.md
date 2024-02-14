@@ -2,7 +2,7 @@
 
 A calculator application
 
-[Sample interface]("https://media.discordapp.net/attachments/1015464234664067122/1207294696389476372/image.png?ex=65df1fce&is=65ccaace&hm=d6e652a70b96c45f2e3910c98b17e7ae07914df7e37ff32b6c723fcabb143aa4&=&format=webp&quality=lossless&width=297&height=468")
+![Sample interface]("https://media.discordapp.net/attachments/1015464234664067122/1207294696389476372/image.png?ex=65df1fce&is=65ccaace&hm=d6e652a70b96c45f2e3910c98b17e7ae07914df7e37ff32b6c723fcabb143aa4&=&format=webp&quality=lossless&width=297&height=468")
 
 # Normal mechanism
 
@@ -49,4 +49,4 @@ A calculator application
 - If the estimation error, display text will be red and the error sound will be played.
 - If the estimation success, success sound will be played.
 
-[UML class diagram]("https://media.discordapp.net/attachments/1015464234664067122/1207294342973227038/hw01_1-24.jpg?ex=65df1f79&is=65ccaa79&hm=4deb19e653c2389b10a9d3e48d380b2304bf000a17def82c0c10164d623743a3&=&format=webp&width=362&height=467")
+![UML class diagram]("https://media.discordapp.net/attachments/1015464234664067122/1207294342973227038/hw01_1-24.jpg?ex=65df1f79&is=65ccaa79&hm=4deb19e653c2389b10a9d3e48d380b2304bf000a17def82c0c10164d623743a3&=&format=webp&width=362&height=467")
