@@ -18,21 +18,20 @@ class CalculatorUI(tk.Tk):
         self.init_components()
         mixer.init()
     def play_sound_error(self):
-        # Load the sound file
         mixer.music.load("Error.mp3")
-        # Play the sound
+        mixer.music.play()
+    def play_sound_song(self):
+        soundlist = ["bgm1.mp3","bgm2.mp3","bgm3.mp3","bgm4.mp3"]
+        selected = random.choice(soundlist)
+        mixer.music.load(selected)
         mixer.music.play()
     def play_sound_normal(self):
-        # Load the sound file
         soundlist = ["sound1.mp3","sound2.mp3","sound3.mp3"]
         selected = random.choice(soundlist)
         mixer.music.load(selected)
-        # Play the sound
         mixer.music.play()
     def play_sound_work(self):
-        # Load the sound file
         mixer.music.load("Quickly.mp3")
-        # Play the sound
         mixer.music.play()
     def init_components(self):
         """Create components and layout the UI."""
@@ -53,8 +52,8 @@ class CalculatorUI(tk.Tk):
     
     def create_keypad(self):
         """Create numeric key frame for keypad"""
-        option = {"padx":5,"pady":5,"font":("Quicksand", 12),"background": "yellow", "foreground": "blue"}
-        numeric = ["7","8","9","4","5","6","1","2","3","π","0","."]
+        option = {"padx":5,"pady":5,"font":("Quicksand", 12),"background": "purple", "foreground": "blue"}
+        numeric = ["7","8","9","4","5","6","1","2","3","♪","0","."]
         keypad = Keypad(parent = self,keynames = numeric, columns = 3)
         keypad.pack(expand=True, fill=tk.BOTH)
         keypad.configure(**option)
@@ -63,7 +62,7 @@ class CalculatorUI(tk.Tk):
     
     def create_sign_pad(self):
         """Create sign button frame"""
-        signs = ["*","/","+","-","(",")","^","mod","e","="]
+        signs = ["*","/","+","-","(",")","^","mod","e","π","="]
         option = {"padx":5,"pady":5,"font":("Quicksand", 12),"background": "orange", "foreground": "blue"}
         keypad = Keypad(parent = self,keynames = signs, columns = 1)
         keypad.pack(expand=True, fill=tk.BOTH)
@@ -196,6 +195,8 @@ class CalculatorUI(tk.Tk):
         elif widget["text"] == "^":
             self.variable = self.variable + "**"
             self.play_sound_normal()
+        elif widget["text"] == "♪":
+            self.play_sound_song()
         elif widget["text"] == EQUAL:
             try:
                 self.variable1 = eval(self.variable)

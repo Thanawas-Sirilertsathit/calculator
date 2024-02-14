@@ -1,12 +1,9 @@
 import tkinter as tk
 from tkinter import ttk
 
-#TODO Keypad should extend Frame so that it is a container
 class Keypad(tk.Frame):
 
     def __init__(self, parent, keynames=[], columns=1, **kwargs):
-        #TODO call the superclass constructor with all args except
-		# keynames and columns
         super().__init__(parent, **kwargs)
         self.keynames = keynames
         self.init_components(columns)
@@ -27,10 +24,6 @@ class Keypad(tk.Frame):
 
     def bind(self, seq = None, handler = None, add = ""):
         """Bind an event handler to an event sequence."""
-        #TODO Write a bind method with exactly the same parameters
-        # as the bind method of Tkinter widgets.
-        # Use the parameters to bind all the buttons in the keypad
-        # to the same event handler.
         for button in self.winfo_children():
             button.bind(seq, handler, add)
     
@@ -51,7 +44,6 @@ class Keypad(tk.Frame):
         Example: keypad['foreground'] would return 'red' if the button
         foreground color is 'red'.
         """
-        # Assuming all buttons have the same value for the given key
         return self.winfo_children()[0][key]
 
     def configure(self, config=None, **kwargs):
@@ -65,7 +57,7 @@ class Keypad(tk.Frame):
         return self
 
 if __name__ == '__main__':
-    keys = list('789456123 0.')  # = ['7','8','9',...]
+    keys = list('789456123 0.')
     root = tk.Tk()
     root.title("Keypad Demo")
     keypad = Keypad(root, keynames=keys, columns=3)
