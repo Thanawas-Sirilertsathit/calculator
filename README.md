@@ -1,6 +1,6 @@
 # calculator
 
-A calculator application
+A calculator application which include most mathematic functions and has some sounds when working and encountering errors
 
 Sample interface : ("https://media.discordapp.net/attachments/1015464234664067122/1207294696389476372/image.png?ex=65df1fce&is=65ccaace&hm=d6e652a70b96c45f2e3910c98b17e7ae07914df7e37ff32b6c723fcabb143aa4&=&format=webp&quality=lossless&width=297&height=468")
 
